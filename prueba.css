@@ -16,6 +16,12 @@ body {
     justify-content: center;
 }
 
+a:link, a:visited, a:active {
+    text-decoration:none;
+    border: 1px solid greenyellow;
+    display:;
+
+}
 
 .menu > ul {
     margin: 5%;
