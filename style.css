@@ -5,22 +5,27 @@
 
 }
 
+html{
+    cursor: url(/img/cursor.png), url(cursor.cur), pointer;
+}
+
 body {
     font-family: var(--tipoFuente); /*selecciono la variable para el tipo de fuente*/
-    background-color: #999ea7; /* Color de fondo */
+    background-color: #eaeef6; /* Color de fondo */
 }
 
 ul {
     margin: 5%;
+    text-shadow: 0px 1px 0px #0a0b0c;
     width: 450px;
     display: flex; /* Alineo los elementos como flexibles    */
     flex-direction: row;
     list-style: none; /* Quito los puntos de la lista */
     padding: 20px 0px;
-    border-radius: 25px;
+    border-radius: 50px;
     border: 1px solid #3e3f40;
-    background-color: #b8b8bf;
-    box-shadow: 0px 4px 8px 0 #0c0c0c7e 0 6px 20px 0 #4e4a657e
+    background-color: #656573;
+    box-shadow: 0px 4px 8px 0 #0c0c0c7e
 
 }
 
@@ -28,4 +33,17 @@ li{
     margin: auto;
     color: whitesmoke;
     font-size: 18px;
+}
+
+li:after{
+    display: block;
+    content: "  ";
+    border-bottom: 2px solid whitesmoke;
+    padding-bottom: 1%;
+    transform: scaleX(0);
+    transition: 400ms ease
+}
+
+li:hover::after{
+    transform: scaleX(1);
 }
