@@ -2,11 +2,12 @@
 
 :root { /*Aqui creo un variable para aplicar el tipo de fuente a todo el documento*/
     --tipoFuente: 'Montserrat', sans-serif;
-
+        cursor: url(/img/cursor.png), url(cursor.cur), pointer;        
 }
 
-html{
-    cursor: url(/img/cursor.png), url(cursor.cur), pointer;
+
+.menu ul li a, a:visited, a:active, a:link{
+    text-decoration: none !important; /*me quita el subrallado pero no el color*/
 }
 
 body {
@@ -43,7 +44,7 @@ li{
     margin: auto;
     color: whitesmoke;
     font-size: 18px;
-    
+
 }
 
 li:after{ /* crea un pseudo-elemento que es el último hijo del elemento seleccionado. */
@@ -69,3 +70,20 @@ li:hover::after{
    max-width: 500px;
    /* background-color: aquamarine;*/
 } 
+
+.wrapper{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.wrapper > *{
+    padding: 2rem;
+    border: 1px solid tomato;
+    display: block;
+    
+}
+
+header{
+    border: 3px solid;
+    height: 100px;
+}
