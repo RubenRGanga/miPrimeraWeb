@@ -2,7 +2,7 @@
 
 :root { /*Aqui creo un variable para aplicar el tipo de fuente a todo el documento*/
     --tipoFuente: 'Montserrat', sans-serif;
-        cursor: url(img/cursor.png), pointer;        
+        cursor: url(img/cursor.png), default;
 }
 
 
@@ -14,7 +14,7 @@
 body {
     font-family: var(--tipoFuente); /*selecciono la variable para el tipo de fuente*/
     background-color: #eaeef6; /* Color de fondo */
-    display: grid; /*anteriormente flex*/
+    display: grid;
     justify-content: center;
 }
 
@@ -31,7 +31,7 @@ body {
     border: 3px solid #3e3f40;
     justify-content: center;
     background-color: #656573;
-    box-shadow: 0px 4px 8px 0px #0c0c0c7e;
+    box-shadow: 0px 8px 16px 0px #0604047e;
     opacity: 25%;
 
 }
@@ -50,18 +50,18 @@ li{
 li:after{ /* crea un pseudo-elemento que es el último hijo del elemento seleccionado. */
     display: block;
     content: "  ";
-    border-bottom: 2px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke; /*crea un subrayado*/
     padding-bottom: 1%;
-    transform: scaleX(0);
-    transition: 400ms ease
+    transform: scaleX(0); /* Inicia en posicion 0 */
+    transition: 400ms ease /* 0,4segundos en realizar la animación */
 }
 
 li:hover::after{
-    transform: scaleX(1);
+    transform: scaleX(1); /* Realiza el subrayado con un ancho de 1 elemento al pasar el ratón */
 }
 
 .anchomenu{
-    width: 500px;
+    width: 500px; 
     margin: 0em auto;
 }
 
@@ -83,6 +83,13 @@ li:hover::after{
 }
 
 .wrapper > *{
+    padding: .5rem;
+    /* border: 1px solid tomato; */
+    display: block;
+    
+}
+
+.wrapper2 > *{
     padding: .5rem;
     /* border: 1px solid tomato; */
     display: block;
@@ -136,6 +143,25 @@ li:hover::after{
 
 .cajab1{
     grid-column: span 4;
+}
+
+.cajaF1{
+    grid-column: span 4;
+}
+
+.cajaF2{
+    grid-column: span 4;
+    margin-left: 105px;
+    
+}
+
+.cajaF3{
+    grid-column: span 4;
+    width: 500px;    
+}
+
+.cajaF3 > video{
+    width: 500px;
 }
 
 header{
@@ -201,6 +227,11 @@ header{
 @media (max-width: 550px) {
 
 .anchomax > img{
+    height: 250px;
+    width: auto;
+}
+
+.wrapper2 > *{
     height: 250px;
     width: auto;
 }
